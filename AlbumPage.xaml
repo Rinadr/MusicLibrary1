@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid> 
         <StackPanel Orientation="Vertical" Margin="400,150,0,0"> 
             <GridView x:Name="Albums" ItemsSource="{Binding}" 
                   Height="560" Width="390" 
