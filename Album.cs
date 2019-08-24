@@ -15,6 +15,7 @@ namespace MusicLibrary
 
         public static void WriteAlbum(Album album)
         {
+            //Create a File for each Album
             var albumData = $"{album.AlbumTitle}, {album.AlbumCover}";
             FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, albumData);
         }

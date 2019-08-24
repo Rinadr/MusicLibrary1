@@ -8,9 +8,10 @@ namespace MusicLibrary
 {
     class Song
     {
+        public string AlbumTitle { get; set; }
         public string SongTitle { get; set;}
         public string MusicFile { get; set;}
-        public string AlbumTitle { get; set; }
+        
 
         public static void WriteSong(Song song, string TEXT_FILE_NAME)
         {

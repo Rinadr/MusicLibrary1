@@ -9,36 +9,36 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="150, 150, 0, 0">
-            <GridView Name="Albums" ItemsSource="{Binding}" 
-                  Height="300" Width="400" 
+        <StackPanel Orientation="Vertical" Margin="400,150,0,0">
+            <GridView x:Name="Albums" ItemsSource="{Binding}" 
+                  Height="560" Width="390" 
                   ScrollViewer.VerticalScrollBarVisibility="Auto" 
                   SelectionChanged="Albums_SelectionChanged"
-                  ItemClick="Albums_ItemClick" >
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="local:Album" >
-                    <StackPanel Orientation="Horizontal" Margin="2">
-                        <TextBlock Text="{x:Bind AlbumTitle }" Width="100" />
-                        <TextBlock Text="{x:Bind AlbumCover}" Width="100" />
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                  ItemClick="Albums_ItemClick" RenderTransformOrigin="0.612,0.54" >
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Album" >
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <TextBlock Text="{x:Bind Path=AlbumTitle}" Width="100" />
+                            <TextBlock Text="{x:Bind Path=AlbumCover}" Width="100" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Margin="150, 150, 0, 0">
-        <Grid>
-            <StackPanel Orientation="Vertical" Margin="150, 150, 0, 0">
-                <StackPanel Orientation="Horizontal" >
-                    <TextBlock Text="Album Title: " Width="100" Height="50"/>
-                    <TextBox Name="AlbumTitle"  Height="35" Width="100"/>
+        <StackPanel Orientation="Vertical" Margin="150,150,500,382">
+            <Grid>
+                <StackPanel Orientation="Vertical" Margin="10,10,400,400">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Album Title: " Width="100" Height="50"/>
+                        <TextBox Name="AlbumTitle"  Height="35" Width="100"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="Album Cover:" Width="100" VerticalAlignment="Bottom" Height="50"/>
+                        <Button Content="Select Cover" Click="ButtonPickCover_Click"/>
+                    </StackPanel>
+                    <Button Content="Add Album" Click="ButtonSaveAlbum_Click" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Album Cover:" Width="100" VerticalAlignment="Bottom" Height="50"/>
-                    <Button Content="Select Cover" Click="ButtonPickCover_Click"/>
-                </StackPanel>
-                <Button Content="Add Album" Click="ButtonSaveAlbum_Click" />
-            </StackPanel>
-        </Grid>
+            </Grid>
         </StackPanel>
     </Grid>
 </Page>

@@ -9,9 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Vertical" Margin="150, 150, 0, 0">
+        <StackPanel Orientation="Vertical" Margin="550, 50, 0, 0">
             <GridView Name="Songs" ItemsSource="{Binding}" 
-                  Height="300" Width="400" 
+                  Height="380" Width="400" 
                   ScrollViewer.VerticalScrollBarVisibility="Auto" 
                   SelectionChanged="Songs_SelectionChanged">
                 <GridView.ItemTemplate>
@@ -37,11 +37,10 @@
             </StackPanel>
             <Button Content="Save" Click="ButtonSave_Click" />
         </StackPanel>
-            <StackPanel  Orientation="Horizontal" Margin="2">
-
-                <MediaPlayerElement Name="mediaPlayer" MaxWidth="400"
+            <StackPanel  Orientation="Horizontal" Margin="50" Width="530">
+                <MediaPlayerElement x:Name="mediaPlayer" MaxWidth="550" 
               AutoPlay="False"
-              AreTransportControlsEnabled="True" />
+              AreTransportControlsEnabled="True" Height="120" Width="525" />
             </StackPanel>
 
         </StackPanel>
