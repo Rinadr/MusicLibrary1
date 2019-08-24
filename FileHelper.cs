@@ -11,6 +11,7 @@ namespace MusicLibrary
 {
     public static class FileHelper
     {
+        //
         public async static void WriteTextFileAsync(string filename, string content)
         {
             var storageFolder = ApplicationData.Current.LocalFolder;
